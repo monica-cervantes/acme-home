@@ -1,0 +1,153 @@
+//main: ../main.scss
+
+/**
+ * Basic typography style for copy text
+ */
+body {
+  color: $text-color;
+  font: normal 125% / 1.4 $text-font-stack;
+}
+
+
+.heading-1 {
+  margin-bottom: 24px;
+
+  color: $white;
+  font-family: $font-helvetica-bold;
+  font-size: 50px;
+  line-height: 1;
+}
+
+.heading-2 {
+  color: $white;
+  font-family: $font-helvetica-light;
+  font-size: 36px;
+  line-height: 1;
+}
+
+.heading-3 {
+  margin-bottom: 0;
+
+  font-size: 34px;
+}
+
+.heading-4 {
+  font-family: $font-helvetica-bold;
+}
+
+.heading-5 {
+  color: $white;
+  font-family: $font-helvetica-bold;
+  font-size: 40px;
+}
+
+.heading-6 {
+  font-family: $font-helvetica-bold;
+  font-size: 29px;
+}
+
+.subheading-1 {
+  margin-bottom: 19px;
+
+  font-size: 15px;
+}
+
+.subheading-2 {
+  color: $white;
+  font-size: 24px;
+}
+
+.subheading-3 {
+  font-size: 15px;
+}
+
+.month {
+  font-family: $font-interstate-light;
+}
+
+.day {
+  font-family: $font-interstate-bold;
+  font-size: 36px;
+}
+
+@include respond-to(lg-down) {
+  .heading-6 {
+    font-size: 27px;
+  }
+}
+
+@include respond-to(md-down) {
+  .heading-1 {
+    margin-bottom: 15px;
+
+    font-size: 38px;
+  }
+
+  .heading-2 {
+    font-size: 28px;
+  }
+
+  .heading-5 {
+    font-size: 34px;
+  }
+
+  .heading-6 {
+    font-size: 21px;
+  }
+
+  .subheading-2 {
+    font-size: 15px;
+  }
+
+  .subheading-3 {
+    font-size: 12px;
+  }
+
+  .month {
+    font-size: 14px;
+  }
+
+  .day {
+    font-size: 26px;
+  }
+}
+
+@include respond-to(sm-down) {
+  .heading-1 {
+    margin-top: 60px;
+
+    font-size: 34px;
+  }
+
+  .heading-2 {
+    font-size: 16px;
+  }
+
+  .heading-3 {
+    font-size: 26px;
+  }
+
+  .heading-5 {
+    font-size: 24px;
+  }
+
+  .heading-6 {
+      font-size: 16px;
+  }
+  
+  .subheading-1 {
+    font-size: 13px;
+  }
+
+  .subheading-2 {
+    font-size: 12px;
+  }
+
+  .month {
+    font-size: 12px;
+  }
+
+  .day {
+    font-size: 20px;
+  }
+}

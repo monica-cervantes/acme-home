@@ -1,0 +1,25 @@
+//main: ../main.scss
+
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the pagination component.
+// -----------------------------------------------------------------------------
+
+.swiper-pagination-bullet {
+  background-color: transparent;
+  border: 1px solid $white;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: $white;
+}
+
+.section-events {
+  .swiper-pagination-bullet {
+    background-color: transparent;
+    border: 1px solid $fortress-grey;
+  }
+  
+  .swiper-pagination-bullet-active {
+    background-color: $fortress-grey;
+  }
+}

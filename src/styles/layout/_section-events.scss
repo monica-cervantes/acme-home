@@ -1,0 +1,242 @@
+//main: ../main.scss
+
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the section events of the site/application.
+// -----------------------------------------------------------------------------
+
+
+.section-events {
+  padding: 30px 0 100px;
+  background-color: $mercury;
+
+  .col {
+    background-color: transparent;
+  }
+
+  .bg-blue {
+    position: relative;
+    z-index: 3;
+    
+    padding: 0 25px 58px;
+
+    color: $white;
+
+    background-color: $chun-li-blue;
+  }
+
+  .subheading-1 {
+    margin-bottom: 53px;
+  }
+
+  .subheading-3 {
+    margin-bottom: 45px;
+  }
+
+  .date-wrapper {
+    position: relative;
+    top: -18px;
+
+    padding: 17px 0;
+    width: 93px;
+
+    text-align: center;
+    
+    background-color: $interstellar-blue;
+
+    &:before{
+      content: '';
+
+      position: absolute;
+      top: 8px;
+      left: -19px;
+
+      width: 0; 
+      height: 0; 
+
+      border-left: 14px solid transparent;
+      border-right: 14px solid transparent;
+      border-top: 14px solid $chinese-blue;
+
+      transform: rotate(-45deg);
+    }
+  }
+
+  .month,
+  .day {
+    margin-bottom: 0;
+
+    line-height: 1;
+  }
+
+  .heading-6 {
+    margin-bottom: 0;
+  }
+
+  .location {
+    position: relative;
+
+    width: 100%;
+
+    overflow: hidden;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: -76px;
+      left: 0;
+      z-index: 1;
+      
+      width: 0; 
+      height: 0; 
+      
+      border-top: 76px solid transparent;
+      border-bottom: 76px solid transparent;
+      border-left: 76px solid $chun-li-blue;
+    }
+    
+    p {
+      margin: 10px 0;
+
+      font-family: $font-interstate-bold;
+      font-size: 24px;
+      text-align: right;
+    }
+  }
+}
+
+@include respond-to(md-up) {
+  .section-events {
+    .swiper-slide {
+      display: inline-block;
+    }
+  }
+}
+
+@include respond-to(lg-down) {
+  .section-events {
+    .subheading-3 {
+      margin-bottom: 30px;
+    }
+
+    .location {
+      p {
+        margin: 15px 0;
+        
+        font-size: 20px;
+      }
+    }
+
+    .bg-blue {
+      padding: 0 15px 25px;
+    }
+  }
+}
+
+@include respond-to(md-down) {
+  .section-events {
+    .date-wrapper {
+      top: -10px;
+
+      padding: 10px 0;
+      width: 65px;
+
+      &:before {
+        top: 4px;
+        left: -10px;
+
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        border-top: 8px solid $chinese-blue;
+      }
+    }
+
+    .location {
+      &:before {
+        top: -55px;
+
+        border-top: 55px solid transparent;
+        border-bottom: 55px solid transparent;
+        border-left: 55px solid $chun-li-blue;
+      }
+
+      p {
+        margin: 9px 0;
+
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+@include respond-to(sm-down) {
+  .section-events {
+    position: relative;
+
+    padding: 30px 0 50px;
+
+    .swiper {
+      padding-top: 11px;
+
+      overflow-x: hidden;
+    }
+    
+    .row {
+      justify-content: auto;
+      flex-direction: auto;
+      flex-wrap: inherit;
+    }
+
+    .col {
+      flex-basis: inherit;
+      flex-direction: column;
+      width: 70vw;
+    }
+
+    .bg-blue {
+      display: flex;
+      flex-direction: column;
+
+      width: 100%;
+    }
+
+    .date-wrapper {
+      padding: 6px 0;
+      width: 45px;
+    }
+
+    .heading-6 {
+      margin-bottom: 7px;
+
+      font-size: 18px;
+      text-align: left;
+    }
+
+    .subheading-1 {
+      margin-bottom: 15px;
+    }
+
+    .subheading-3 {
+      margin-bottom: 9px;
+
+      text-align: left;
+    }
+
+    .btn-events {
+      margin-right: auto;
+    }
+
+    .location {
+      &:before {
+        border-top: 45px solid transparent;
+        border-bottom: 45px solid transparent;
+        border-left: 45px solid $chun-li-blue;
+      }
+
+      p {
+        margin: 6px 0;
+
+        font-size: 14px;
+      }
+    }
+  }
+}

@@ -1,0 +1,181 @@
+//main: ../main.scss
+
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the header of the site/application.
+// -----------------------------------------------------------------------------
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+
+  background-color: $white;
+  border-bottom: 23px solid $interstellar-blue;
+
+  .company-name {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-right: 49px;
+    margin-right: 39px;
+    margin-left: 17px;
+
+    border-right: 1px solid;
+
+    h5 {
+      margin-bottom: 0;
+
+      color: $sky;
+      font-family: $font-interstate-bold;
+      font-size: 20px;
+      letter-spacing: .6px;
+      line-height: 1;
+    }
+
+    h2 {
+      margin-bottom: 0;
+
+      color: $bavarian-blue;
+      font-family: $font-interstate-bold;
+      font-size: 54px;
+      line-height: 1;
+    }
+  }
+
+  .navbar-nav {
+    justify-content: space-between;
+    flex: 0 0 100%;
+  }
+
+  .nav-link {
+    color: $black;
+    font-family: $font-helvetica;
+    font-size: 19px;
+
+    @include on-event() {
+      color: $chun-li-blue;
+    }
+  }
+}
+
+@include respond-to(lg-down) {
+  header {
+    img {
+      width: 116px;
+    }
+
+    .company-name {
+      h5 {
+        font-size: 17px;
+      }
+
+      h2 {
+        font-size: 47px;
+      }
+    }
+  }
+}
+
+@include respond-to(md-down) {
+  header {
+    img {
+      width: 90px;
+    }
+
+    .navbar {
+      .container {
+        position: relative;
+  
+        justify-content: center;
+      }
+    }
+
+    .navbar-brand {
+      margin-right: 2px;
+    }
+
+    .company-name {
+      padding-right: 15px;
+      margin-right: 15px;
+
+      h2 {
+        font-size: 32px;
+      }
+
+      h5 {
+        font-size: 11px;
+      }
+    }
+
+    .nav-link {
+      font-size: 16px;
+    }
+  }
+}
+
+@include respond-to(sm-down) {
+  header {
+    background-color: $mercury;
+    border-bottom: none;
+    box-shadow: 0 0 4px rgba(0, 0, 0, .3);
+
+    .navbar {
+      padding-bottom: 0;
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    .navbar-brand {
+      margin-bottom: 8px;
+    }
+
+    .container {
+      max-width: 100%;
+    }
+
+    .navbar-toggler {
+      position: absolute;
+      right: 15px;
+      top: 0;
+    }
+
+    .navbar-collapse {
+      padding: 12px 30px 40px;
+      margin-top: 8px;
+    
+      background-color: $white;
+    }
+
+    .site-links {
+      padding-bottom: 6px;
+      margin-bottom: 5px;
+      width: 100%;
+
+      color: $bavarian-blue;
+      font-family: $font-interstate-light;
+      font-size: 16px;
+      text-align: center;
+
+      border-bottom: 1px solid $silver;
+    }
+
+    .navbar-nav {
+      .nav-item {
+        margin: 5px 0;
+  
+        text-align: center;
+      }
+  
+      .nav-link {
+        padding: 13px 0;
+
+        color: $dugong;
+
+        background-color: $mercury;
+      }
+    }
+  }
+}

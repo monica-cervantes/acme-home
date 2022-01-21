@@ -1,0 +1,44 @@
+//main: ../main.scss
+
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the button component.
+// -----------------------------------------------------------------------------
+
+.btn-white {
+  padding: 11px 44px;
+
+  color: $white;
+  font-size: 19px;
+  text-decoration: none;
+
+  border: 1px solid $white;
+
+  @include on-event() {
+    text-decoration: none;
+
+    background-color: #fff;
+  }
+}
+
+.btn-events {
+  padding: 14px 20px;
+
+  font-size: 18px;
+  font-family: $font-interstate-bold;
+}
+
+@include respond-to(md-down) {
+  .btn-white {
+    padding: 10px 17px;
+
+    font-size: 14px;
+  }
+}
+
+@include respond-to(sm-down) {
+  .btn-white {
+    padding: 7px 17px;
+    
+    font-size: 14px;
+  }
+}

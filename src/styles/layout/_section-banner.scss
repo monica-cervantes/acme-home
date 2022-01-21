@@ -1,0 +1,79 @@
+//main: ../main.scss
+
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the banner of the site/application.
+// -----------------------------------------------------------------------------
+
+
+.section-banner {
+  padding: 123px 0;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  .content-wrapper {
+    max-width: 565px;
+  }
+}
+
+@include respond-to(lg-down) {
+  .section-banner {
+    padding: 100px 0;
+
+    background-position: 78% center;
+  }
+}
+
+@include respond-to(md-down) {
+  .section-banner {
+    padding: 65px 0;
+
+    .content-wrapper {
+      max-width: 420px;
+    }
+  }
+}
+
+@include respond-to(sm-down) {
+  .section-banner {
+    padding: 25px 0 75px;
+
+    background-image: none !important;
+    background-color: $blue-nebula;
+
+    .content-wrapper {
+      max-width: 223px;
+    }
+
+    .heading-1 {
+      position: relative;
+
+      padding-bottom: 13px;
+      margin-bottom: 13px;
+
+      &:before {
+        content: '';
+
+        position: absolute;
+        bottom: 0;
+
+        width: 100%;
+        height: 1px;
+
+        background-image: linear-gradient(to right, $clear-sky 33%, rgba(255,255,255,0) 0%);
+        background-position: bottom;
+        background-size: 9px 1px;
+        background-repeat: repeat-x;
+      }
+
+      span {
+        display: block;
+        margin-bottom: 4px;
+
+        font-family: $font-interstate-light;
+        font-size: 17px;
+      }
+    }
+  }
+}
